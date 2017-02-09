@@ -19,6 +19,4 @@ button.onclick = function (){
     //make the request
     request.open('GET','http://astha20.imad.hasura-app.io/counter',true);
     request.send(null);
-    
-    
-}
+};
