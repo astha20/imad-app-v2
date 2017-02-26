@@ -26,14 +26,14 @@ app.get('/counter', function (req, res) {
 });
 
 var pool = new Pool(config);
-app.get('/test_db' , function (req, res) {
+app.get('/test-db' , function (req, res) {
     //make a select request
     //retuen a response with a result
     pool.query('SELECT * FROM test', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       }else{
-          res.send(JSON.stringfy(result));
+          res.send(JSON.stringify(result.rows));
       }
    });
 });
